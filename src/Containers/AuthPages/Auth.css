@@ -1,0 +1,267 @@
+.authContainer {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 68px);
+  width: 100%;
+}
+
+.background {
+  background-image: url("../../Assets/background2.jpg");
+  background-image: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth-main-content {
+  width: auto;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.app-main-content {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  font-size: 14px;
+  overflow: hidden;
+  margin-top: 32px;
+}
+
+.auth-content-wrapper {
+  padding: 60px 60px 25px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  padding-bottom: 20px;
+}
+
+.input-styling {
+  background-color: #f5f5f5 !important;
+  color: #6d7074 !important;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    position: relative;
+  }
+}
+
+.text-color {
+  color: #6d7074 !important;
+}
+
+.login-btn {
+  min-width: 120px;
+  height: 36px;
+  border-radius: 18px;
+  font-size: 14px;
+}
+
+.background-image::before {
+  background-color: transparent !important;
+}
+
+.fullBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.mediumLine {
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.remember-me-color {
+  color: #242323;
+}
+
+.remember-me .ant-checkbox-inner {
+  border-radius: 4px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.ant-layout-sider.services-sidebar {
+  width: 350px !important;
+}
+
+.dateInfoContainer {
+  position: relative;
+  padding: 12px;
+  margin: 0 12px 12px 0;
+  border-radius: 6px;
+  border: solid 1px #eaeaea;
+  background-color: #fff;
+}
+
+.removeIcon {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.date-text {
+  color: #177ebc;
+}
+
+.time-text {
+  color: #757575;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.add-date-error-msg {
+  font-size: 14px;
+  margin-top: -35px !important;
+  color: red;
+}
+
+.width-100per {
+  width: 100%;
+}
+
+.empty-div {
+  margin-bottom: 70px;
+}
+
+.custom-modal-header .ant-modal-title {
+  font-size: 16px;
+  color: white !important;
+  font-family: "NoirPro";
+  font-weight: 500;
+}
+
+.custom-modal-header .ant-modal-header {
+  background-color: #0a5272;
+  color: white;
+}
+
+.success-modal-text {
+  font-weight: normal;
+  color: #595959;
+  margin: 16px 69px 30px;
+  text-align: center;
+}
+
+.success-btn {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px !important;
+  background-color: #177ebc !important;
+}
+
+.check-circle-outlined {
+  color: #96c762;
+  font-size: 48px;
+}
+
+.custom-modal-close-btn .ant-modal-close-icon {
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .no-padding {
+    padding: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .auth-content-wrapper {
+    padding: 60px 30px 60px 30px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  .often-day .day-form-item .ant-form-item-label,
+  .ant-form-item-control {
+    flex: 0 auto !important;
+    max-width: 100%;
+  }
+}
+
+.text-align-center {
+  text-align-last: center;
+}
+
+.gx-w-100 {
+  width: 100%;
+}
+
+.displayFlex {
+  background-color: #0a5272;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.flex {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  padding-bottom: 20px;
+}
+
+.gx-app-login-wrap {
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 575px) {
+  .gx-app-login-wrap {
+    padding-top: 20px;
+    -webkit-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-width {
+  width: 359px;
+}
+
+.logo-container {
+  padding-bottom: 41px;
+}
+
+.mediumLine {
+  line-height: 18px;
+  font-size: 14px;
+}

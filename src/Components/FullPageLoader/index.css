@@ -1,0 +1,13 @@
+.loader {
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-app-loader {
+    height: calc(100vh - 126px);
+}

@@ -1,0 +1,27 @@
+.profile-card {
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.profile-container {
+    margin: 0 10px 10px;
+}
+
+.profile-pic-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    margin-right: 1.5em;
+}
+
+.profile-name {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.profile-email {
+    font-size: 18px;
+
+}
