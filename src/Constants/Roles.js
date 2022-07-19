@@ -26,6 +26,12 @@ export const MAIN_SIDE_BAR_OPTIONS = {
       icon: "fia-vehicle",
     },
     {
+      text: "My Vehicles",
+      linkTo: AUTHENTICATED_ROUTES.MY_VEHICLE,
+      selectedOptionKey: "my vehicle",
+      icon: "fia-vehicle",
+    },
+    {
       text: "My Profile",
       linkTo: AUTHENTICATED_ROUTES.PROFILE,
       selectedOptionKey: "profile",

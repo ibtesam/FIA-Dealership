@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {Button, Checkbox, Col, Form, Input, Row} from "antd";
 import {EyeInvisibleOutlined, EyeTwoTone} from "@ant-design/icons";
@@ -10,18 +10,19 @@ import {UNAUTHENTICATED_ROUTES} from "../../../Routes/constant";
 
 import "../Auth.css";
 
-const Login = props => {
+const Login = () => {
   const [form] = Form.useForm();
+  const [isChecked, setIsChecked] = useState(false)
 
   const {mutate: login, isLoading} = useLogin({onSuccess});
 
   let stayLoggedIn = true;
 
   const onFinish = async values => {
-    stayLoggedIn = values?.rememberMe ?? false;
+    stayLoggedIn = isChecked;
     const payload = {
       ...values,
-      rememberMe: values?.rememberMe ?? false,
+      rememberMe: isChecked,
     };
     login(payload);
   };
@@ -119,7 +120,8 @@ const Login = props => {
                       <Col>
                         <Checkbox
                           className="noirProRegular remember-me-color mediumLine remember-me"
-                          checked="true"
+                          checked={isChecked}
+                          onChange={() => setIsChecked(!isChecked)}
                         >
                           Remember Me
                         </Checkbox>
