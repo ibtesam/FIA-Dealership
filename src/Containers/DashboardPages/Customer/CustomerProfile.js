@@ -3,6 +3,7 @@ import {default as React, useState} from "react";
 import {useParams} from "react-router";
 import MaskedInput from "react-text-mask";
 import {
+  useCustomerTransaction,
   useEditCustomer,
   useGetCustomerDetails,
 } from "../../../ApiService/customerQueries";
@@ -12,6 +13,7 @@ import "../Profile/index.css";
 import {Patterns} from "../../../Constants/constant";
 import VehicleCard from "./VehicleCard";
 import notificationService from "../../../Services/notification.service";
+import moment from "moment";
 
 const CustomerProfile = () => {
   const loc = useParams();
@@ -20,6 +22,7 @@ const CustomerProfile = () => {
   const {data: customer, isLoading} = useGetCustomerDetails({
     id: loc.customerId,
   });
+  const {data: transactionData, isLoading: transactionLoading} = useCustomerTransaction(loc.customerId)
 
   const {mutate: edit, isLoading: isLoadingEdit} = useEditCustomer(
     {id: loc.customerId},
@@ -84,7 +87,7 @@ const CustomerProfile = () => {
         </div>
       </div>
       <Row>
-        <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+        <Col xl={16} lg={16} md={16} sm={24} xs={24}>
           <Widget loading={isLoading} title="Profile" styleName="profile-card">
             <Form
               initialValues={customer}
@@ -240,6 +243,14 @@ const CustomerProfile = () => {
                 </Col>
               </Row>
             </Form>
+          </Widget>
+        </Col>
+        <Col xl={8} lg={8} md={8} sm={24} xs={24}>
+          <Widget loading={transactionLoading} title="Transactions" styleName="profile-card">
+            {transactionData?.length == 0 ? <div className="no-record">No Record Found</div> :
+              transactionData?.map((item, index) => {
+                return <div className="transaction" key={index}>{`${index + 1}. ${item.vehicleDetails} bought on ${moment(item.date).local().format("DD-MMM-YYYY")} for Rs ${item.totalCost}.`}</div>
+              })}
           </Widget>
         </Col>
       </Row>

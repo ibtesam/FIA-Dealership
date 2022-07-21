@@ -32,7 +32,7 @@ const ViewVehicle = () => {
     notificationService.success(
       "Payment Successful! Your vehicle will be shipped to your address in 4 to 5 working days!"
     );
-    meta.refetch()
+    // meta.refetch()
   }
 
   const {data: vehicle, isLoading} = useGetVehicleDetails({

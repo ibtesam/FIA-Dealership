@@ -62,3 +62,17 @@ export function useCustomerBuy(options) {
     return data;
   }, options);
 }
+
+export function useCustomerTransaction(id) {
+  return useQuery(
+    [STORAGE_KEY.CUSTOMER_INFO, id],
+    async () => {
+      const {data} = await request({
+        url: `api/v1/Customer/${id}/transactions`,
+        method: API_CONFIG.GET,
+      });
+      return data;
+    },
+    {staleTime: Infinity, cacheTime: Infinity}
+  )
+}

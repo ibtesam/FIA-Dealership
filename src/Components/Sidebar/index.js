@@ -15,7 +15,7 @@ import AuthService from "../../Utils/auth.service";
 
 const Sidebar = () => {
   const user = AuthService.getUserInfo();
-  let sideBarOptions = MAIN_SIDE_BAR_OPTIONS[user.roles[0]];
+  let sideBarOptions = MAIN_SIDE_BAR_OPTIONS[user?.roles[0]];
   const {SubMenu, Item} = Menu;
   const {Sider} = Layout;
   const {pathname} = useLocation();
