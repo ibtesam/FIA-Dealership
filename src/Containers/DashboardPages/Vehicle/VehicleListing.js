@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import {Col, Row, Modal} from "antd";
 import {EyeOutlined, EditOutlined} from "@ant-design/icons";
 
+import AddVehicleModal from "./AddVehicleModal";
 import GridView from "../../../Components/Gridview";
 import utilService from "../../../Utils/utils.service";
 import placeholder from "../../../Assets/inventory-placeholder.webp";
 import {useGetVehicleListing} from "../../../ApiService/vehicleQueries";
 import useGridRequest from "../../../Components/Gridview/useGridRequest";
-import AddVehicleModal from "./AddVehicleModal";
 import AuthService from "../../../Utils/auth.service";
 import {VEHICLE_STATUS_CONST} from "../../../Constants/constant";
 
